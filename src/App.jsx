@@ -4,8 +4,17 @@ import Display from './Components/Display'
 import styles from './App.module.css'
 import ButtonsContainer from './Components/ButtonsContainer'
 
+const HandleClick=(event)=>{
+  
+  console.log("Clicked" + event);
+  }
+
+
+
+
+
 function App() {
-let [ calVal, setcalVa ] = useState("45");
+let [ calVal, setcalVa ] = useState("");
 
 
 
@@ -13,7 +22,7 @@ let [ calVal, setcalVa ] = useState("45");
   return <div className={styles.calculator} >
 <Display calVal={calVal}></Display>
 
-<ButtonsContainer></ButtonsContainer>
+<ButtonsContainer HandleClick={HandleClick}></ButtonsContainer>
 
 
   </div>
