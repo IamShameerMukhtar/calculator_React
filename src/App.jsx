@@ -4,10 +4,7 @@ import Display from './Components/Display'
 import styles from './App.module.css'
 import ButtonsContainer from './Components/ButtonsContainer'
 
-const HandleClick=(event)=>{
-  
-  console.log("Clicked" + event);
-  }
+
 
 
 
@@ -16,7 +13,22 @@ const HandleClick=(event)=>{
 function App() {
 let [ calVal, setcalVa ] = useState("");
 
-
+const HandleClick=(buttonText)=>{
+  
+  if(buttonText==='c'){
+ setcalVa("")
+  }
+  else if(buttonText==='='){
+ setcalVa(eval(calVal))
+ 
+  }
+  else
+  {
+ const newDisVal = calVal + buttonText;
+ setcalVa(newDisVal);
+ 
+  }
+ }
 
 
   return <div className={styles.calculator} >

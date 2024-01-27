@@ -23,7 +23,7 @@ const ButtonNames=[
 
 
 return <div id={styles.button_Container}>
-{ButtonNames.map(names=><button onClick={HandleClick} className={styles.button1} >{names}</button>)}
+{ButtonNames.map(names=><button onClick={()=>HandleClick(names)} className={styles.button1} >{names}</button>)}
 
 </div>
 
